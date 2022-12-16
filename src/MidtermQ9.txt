@@ -1,0 +1,77 @@
+a. 
+	A merit to this way of thinking is the rate of development. If you look at robots as machines and nothing more, then the tests
+	you perform on them should not matter ethically (towards the robot). There are many videos that depict testing as being rough and 
+	mean towards the robots, but they are necessary tests for limit testing. Until we have a robot that is verifiably counscious, I
+	don't think that ethics should be a consideration.
+
+b. 
+	- First law: A robot may not injure a human being or, through inaction, allow a human being to come to harm. This law has a lot of 
+	complexity. Having the robot not harm the human is difficult, but always being on the lookout for harm and not allowing said harm
+	to occur is much harder. How does a robot even predict EVERY possible way for a human to get hurt? And then how would it know how 
+	to solve such situations?
+	- Second law: A robot must obey the orders given it by human beings except where such orders would conflict with the First Law. This
+	law sounds a lot simpler at surface level. I do think it is more simple than the First Law. However, what if it is given two conflicting
+	orders? How does it resolve those orders? How does it think throuhg a paradoxical order without getting stuck? When we think about these questions
+	we can see that the second law is still very complex. Plus, it needs to always take into account the first law, which means the Second law 
+	complexity compounds on top of the First law.
+	- Third law: A robot must protect its own existence as long as such protection does not conflict with the First or Second Law. Again compounding. 
+	Because the robot needs to be constantly thinking about the first and second law, this makes the third law the most complex. It would need to verify
+	that any action it took to protect itself does not violate the two previous laws.
+
+	SCENARIO: A human-like robot is walking from the grocery store to get cat food for its owner's cat. It sees a man fall on the ground dangerously 
+	close to traffic. It stops following the Second law, to uphold the first law. It rushes to the man and positions itself in the street in front of trafic, 
+	ignoring the third law to uphold the first. However, it must only do this if it deems likly that a colision with the robot will not harm a driver. Having 
+	deemed this action safe, it goes into the street and stops trafic. Once that danger has been avoided, it continues with its task and upholds the second law.
+
+	Psuedo Code:
+		while(powered on)
+			Create Task: Look for humans
+			{
+				Scan environment
+					Check every object
+					If object is human:
+						Classify human
+						Classify threat level
+						Store human in map/memory
+			}
+			Create Task: Listen for command
+			{
+				if (command is issued)
+					Create Task: Perform command
+			}
+			Create Task: Protect Self
+			{
+				Scan environment
+					If object is threat to self:
+						avoid object
+							if avoiding causes harm to human
+								abort avoid
+			}
+			
+			if (human is found and in danger)
+				Stop Task: Perform command
+				Stop Task: Protect Self
+				if (human no longer in danger)
+					Start Task: Perform command
+					Start Task: Protect Self
+
+c. 
+	Who is responsible for harm done by autonomous vehicles? It's a massive 'depends'. In the article "WHen an autonomous vehicle hits a pedestrian,
+	who is responsible?" It talks about how there was a driver in the car at the time of the accident, but they were not paying attention when the accident
+	occurred. Even though the car may be autonomous, I think that the human driver is ultimatley responsible if they are in the car at the drivers seat.
+	In the wikipedia article it talked about many different types of responsibility. It's argued that if the car is 100% self reliant, and an accident occurs with
+	no human in the drivers seat, it is the manufacturers concern. If the vehicle is physically faulty, thats a manufacturers problem. Other ideas is that the person 
+	who issued the command is responsible. The fear is that there is no way to predict all accidents, so manufacturers could be sued to oblivion if it is their sole 
+	responsibility. We are trying to get to a place where responsibility can be shared, so that the burden doesn't rest all on one party.
+
+d.
+	Laws:
+		- You cannot be in a self driving car unless you have a valid drivers liscence, or you are with someone who does. The person with a driver license is 
+		responsible for paying attention to the road to prevent unforseen accidents.
+			-	Drawbacks: Not as many people can use these self driving vehicles. It also removes some usefullness of the self driving car. Not paying attention
+			while its driving is a big selling point. 
+
+		- All autonomous systems must be under some form of human supervision.
+			-	Drawbacks: If it needs to be supervised, is it autonomous? This law may defeat the purpose of some systems and their usefullness. It also means
+			that we will need to come up with effective ways for one person to monitor many systems if this law is to be effective.
+
